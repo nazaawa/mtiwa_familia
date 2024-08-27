@@ -1,0 +1,14 @@
+{
+    "@@locale": "fr",
+    "hello": "Salut",
+    "welcomeTo": "Bienvenue a MtiFamilia",
+    "discoverRoots": "Découvrez vos racines ici",
+    "exploreYourFamilyHistory": "Explorez votre histoire familiale",
+    "joinUsToGrowYourFamilyTree": "Plonger au cœur de votre héritage familial et tisser les fils de votre histoire",
+    "togetherForABetterFuture": "Ensemble, enracinons notre passé pour bâtir un avenir plus ancré.",
+    "login": "Connexion",
+    "loginWith": "Connexion avec",
+    "or": "ou",
+    "signUp": "S'enregistrer",
+    "start": "Commencer"
+}

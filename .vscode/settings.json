@@ -1,0 +1,12 @@
+{
+  "$schema": "",
+  "cSpell.words": ["Cupertino", "lora", "mtiwa", "svgs"],
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.dart": "explicit",
+      "editor.suggest.snippets.dart": "explicit",
+      "editor.suggest.snippets.dartdoc": "explicit"
+    }
+  }
+}
