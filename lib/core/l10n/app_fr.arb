@@ -10,5 +10,7 @@
     "loginWith": "Connexion avec",
     "or": "ou",
     "signUp": "S'enregistrer",
-    "start": "Commencer"
+    "start": "Commencer",
+    "loginHere": "Connectez-vous",
+    "welcomeBackYouVeBeenMissed": "Bon retour, Vous nous \n avais manquée !"
 }

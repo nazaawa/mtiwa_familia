@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:mtiwa_familia/core/l10n/utils/localizations.dart';
+import 'package:mtiwa_familia/core/router/routes/routes.dart';
 import 'package:mtiwa_familia/core/widgets/custom_button_app.dart';
 import 'package:mtiwa_familia/gen/assets.gen.dart';
 
@@ -55,6 +55,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             CustomButtonApp(
               label: context.l10n.start,
+              onTap: () => const LoginRoute().go(context),
             ),
           ],
         ),

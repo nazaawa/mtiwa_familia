@@ -29,12 +29,16 @@ class $AssetsImagesGen {
 class $AssetsSvgsGen {
   const $AssetsSvgsGen();
 
+  /// File path: assets/svgs/ellipse_right.svg
+  SvgGenImage get ellipseRight =>
+      const SvgGenImage('assets/svgs/ellipse_right.svg');
+
   /// File path: assets/svgs/father_and_daughter.svg
   SvgGenImage get fatherAndDaughter =>
       const SvgGenImage('assets/svgs/father_and_daughter.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [fatherAndDaughter];
+  List<SvgGenImage> get values => [ellipseRight, fatherAndDaughter];
 }
 
 class Assets {

@@ -2,34 +2,43 @@ import 'package:flutter/material.dart';
 
 class CustomButtonApp extends StatelessWidget {
   final String label;
+  final VoidCallback? onTap;
+  final Color? backgroundColor;
+  final Color? textColor;
   const CustomButtonApp({
     super.key,
     required this.label,
+    this.onTap,
+    this.backgroundColor,
+    this.textColor,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: 60,
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-      decoration: ShapeDecoration(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-          side: const BorderSide(
-            color: Color(0xFF1F41BB),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: double.infinity,
+        height: 60,
+        decoration: ShapeDecoration(
+          color: backgroundColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+            side: const BorderSide(
+              color: Color(0xFF1F41BB),
+            ),
           ),
         ),
-      ),
-      child: Text(
-        label,
-        textAlign: TextAlign.center,
-        style: const TextStyle(
-          fontSize: 20,
-          fontFamily: 'Poppins',
-          fontWeight: FontWeight.w600,
-          color: Color(0xFF1F41BB),
-          height: 0,
+        child: Center(
+          child: Text(
+            label,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+              color: textColor ?? const Color(0xFF1F41BB),
+            ),
+          ),
         ),
       ),
     );
