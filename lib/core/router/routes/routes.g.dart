@@ -8,6 +8,7 @@ part of 'routes.dart';
 
 List<RouteBase> get $appRoutes => [
       $welcomeRoute,
+      $familyTreeRoute,
     ];
 
 RouteBase get $welcomeRoute => GoRouteData.$route(
@@ -43,6 +44,29 @@ extension $LoginRouteExtension on LoginRoute {
 
   String get location => GoRouteData.$location(
         '/login',
+      );
+
+  void go(BuildContext context) => context.go(location);
+
+  Future<T?> push<T>(BuildContext context) => context.push<T>(location);
+
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
+
+  void replace(BuildContext context) => context.replace(location);
+}
+
+RouteBase get $familyTreeRoute => GoRouteData.$route(
+      path: '/family-tree',
+      factory: $FamilyTreeRouteExtension._fromState,
+    );
+
+extension $FamilyTreeRouteExtension on FamilyTreeRoute {
+  static FamilyTreeRoute _fromState(GoRouterState state) =>
+      const FamilyTreeRoute();
+
+  String get location => GoRouteData.$location(
+        '/family-tree',
       );
 
   void go(BuildContext context) => context.go(location);

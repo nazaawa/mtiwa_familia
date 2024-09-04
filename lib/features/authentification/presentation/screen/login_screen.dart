@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mtiwa_familia/core/l10n/utils/localizations.dart';
+import 'package:mtiwa_familia/core/router/routes/routes.dart';
 import 'package:mtiwa_familia/core/widgets/custom_button_app.dart';
 import 'package:mtiwa_familia/core/widgets/custom_text_field.dart';
 import 'package:mtiwa_familia/features/authentification/presentation/components/background_style.dart';
@@ -81,10 +82,11 @@ class LoginScreen extends HookConsumerWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  const CustomButtonApp(
+                  CustomButtonApp(
                     label: "Login",
-                    backgroundColor: Color(0xFF1F41BB),
+                    backgroundColor: const Color(0xFF1F41BB),
                     textColor: Colors.white,
+                    onTap: () => const FamilyTreeRoute().go(context),
                   ),
                   const SizedBox(
                     height: 30,

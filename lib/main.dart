@@ -3,13 +3,33 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mtiwa_familia/core/router/router.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:mtiwa_familia/locator.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-void main() {
+import 'core/theming/colors.dart';
+
+void main() async {
+  configureDependencies();
+  await Future.wait([
+    ScreenUtil.ensureScreenSize(),
+    preloadSVGs(['assets/svgs/google_logo.svg'])
+  ]);
   runApp(
     const ProviderScope(
       child: MyApp(),
     ),
   );
+}
+
+Future<void> preloadSVGs(List<String> paths) async {
+  for (final path in paths) {
+    final loader = SvgAssetLoader(path);
+    await svg.cache.putIfAbsent(
+      loader.cacheKey(null),
+      () => loader.loadBytes(null),
+    );
+  }
 }
 
 class MyApp extends ConsumerWidget {
@@ -37,9 +57,12 @@ class MyApp extends ConsumerWidget {
       ],
       title: 'Mti Familia',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
-        fontFamily: "Poppins",
+        textSelectionTheme: const TextSelectionThemeData(
+          cursorColor: ColorsManager.mainBlue,
+          selectionColor: Color.fromARGB(188, 36, 124, 255),
+          selectionHandleColor: ColorsManager.mainBlue,
+        ),
       ),
     );
   }

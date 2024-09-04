@@ -1,9 +1,22 @@
 {
   "$schema": "",
-  "cSpell.words": ["Cupertino", "lora", "mtiwa", "svgs"],
+  "cSpell.words": [
+    "Cupertino",
+    "generalogy",
+    "lora",
+    "mtiwa",
+    "nullable",
+    "pelissier",
+    "screenutil",
+    "sqlite",
+    "svgs",
+    "uuid",
+    "Uuid"
+  ],
   "[dart]": {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
+      "source.fixAll": true,
       "source.fixAll.dart": "explicit",
       "editor.suggest.snippets.dart": "explicit",
       "editor.suggest.snippets.dartdoc": "explicit"

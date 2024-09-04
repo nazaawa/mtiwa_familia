@@ -43,6 +43,23 @@ dependencies:
   flutter_svg: ^2.0.10+1
   flutter_form_builder: ^9.4.1
   hooks_riverpod: ^2.5.2
+  graphview: ^1.2.0
+  faker: ^2.2.0
+  uuid: ^4.5.0
+  drift: ^2.20.0
+  drift_flutter: ^0.2.0
+  path_provider: ^2.1.4
+  injectable:
+  # add get_it
+  get_it:
+  flutter_screenutil: ^5.9.3
+  flutter_bloc: ^8.1.5
+  flutter_offline: ^3.0.1
+  gap: ^3.0.1
+  google_sign_in: ^6.2.1
+  rive: ^0.13.4
+  awesome_dialog: ^3.2.1
+  cached_network_image: ^3.3.1
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +72,10 @@ dev_dependencies:
   custom_lint: ^0.6.5
   riverpod_lint: ^2.3.13
   flutter_gen_runner:
+  drift_dev: ^2.20.1
+  injectable_generator:
+
+  # add build runner if not already added
 
 flutter_launcher_icons:
   android: "launcher_icon"
