@@ -7,6 +7,7 @@ import 'package:mtiwa_familia/features/members/data/tables/member_table.dart';
 import 'package:mtiwa_familia/features/profil/data/table/profil_table.dart';
 import 'package:mtiwa_familia/features/profil/data/table/user_table.dart';
 import 'package:path_provider/path_provider.dart';
+// ignore: depend_on_referenced_packages
 import 'package:path/path.dart' as p;
 import 'package:uuid/uuid.dart';
 

@@ -5,14 +5,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
-import 'package:mtiwa_familia/core/helpers/extensions.dart';
 import 'package:mtiwa_familia/core/helpers/rive_controller.dart';
 import 'package:mtiwa_familia/core/theming/styles.dart';
 import 'package:mtiwa_familia/core/widgets/already_have_account_text.dart';
 
 import 'package:mtiwa_familia/core/widgets/login_and_signup_animated_form.dart';
-import 'package:mtiwa_familia/core/widgets/no_internet.dart';
-import 'package:mtiwa_familia/core/widgets/progress_indicaror.dart';
+import 'package:mtiwa_familia/core/widgets/progress_indicator.dart';
 import 'package:mtiwa_familia/core/widgets/sign_in_with_google_text.dart';
 import 'package:mtiwa_familia/core/widgets/terms_and_conditions_text.dart';
 import 'package:mtiwa_familia/features/authentification/presentation/logic/cubit/auth_cubit.dart';
@@ -54,7 +52,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   listenWhen: (previous, current) => previous != current,
                   listener: (context, state) async {
                     if (state is AuthLoading) {
-                      ProgressIndicaror.showProgressIndicator(context);
+                      CustomProgressIndicator.showProgressIndicator(context);
                     } else if (state is AuthError) {
                       riveHelper.addFailController();
 
@@ -82,7 +80,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       //   predicate: (route) => false,
                       //   arguments: [state.googleUser, state.credential],
                       // );
-                    } else if (state is UserSingupButNotVerified) {
+                    } else if (state is UserSingUpButNotVerified) {
                       context.pop();
                       riveHelper.addSuccessController();
                       await AwesomeDialog(
@@ -108,7 +106,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           isSignUpPage: true,
                         ),
                         Gap(10.h),
-                        const SigninWithGoogleText(),
+                        const SignInWithGoogleText(),
                         Gap(5.h),
                         InkWell(
                           onTap: () {

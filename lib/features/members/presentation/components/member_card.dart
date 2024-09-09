@@ -6,7 +6,7 @@ class MemberCard extends StatelessWidget {
   final String birthYear;
   final bool isSpouse;
 
-  MemberCard({
+  const MemberCard({super.key, 
     required this.firstName,
     required this.lastName,
     required this.birthYear,

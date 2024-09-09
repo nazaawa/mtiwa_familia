@@ -1,22 +1,35 @@
 {
   "$schema": "",
   "cSpell.words": [
+    "Andedi",
+    "artboard",
+    "Artboard",
+    "autoplay",
+    "Buchheim",
+    "componets",
     "Cupertino",
     "generalogy",
+    "graphview",
+    "horiz",
+    "ksecondry",
+    "ksmall",
     "lora",
     "mtiwa",
     "nullable",
     "pelissier",
     "screenutil",
+    "sosa",
     "sqlite",
     "svgs",
+    "theming",
     "uuid",
-    "Uuid"
+    "Uuid",
+    "vsync"
   ],
   "[dart]": {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll": true,
+      "source.fixAll": "explicit",
       "source.fixAll.dart": "explicit",
       "editor.suggest.snippets.dart": "explicit",
       "editor.suggest.snippets.dartdoc": "explicit"

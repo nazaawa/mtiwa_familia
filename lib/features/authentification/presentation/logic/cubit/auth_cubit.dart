@@ -5,7 +5,7 @@ import 'package:flutter/foundation.dart';
 part 'auth_state.dart';
 
 class AuthCubit extends Cubit<AuthState> {
-  AuthCubit(super.initialState);
+  AuthCubit() : super(AuthInitial());
   // final FirebaseAuth _auth = FirebaseAuth.instance;
 
   // AuthCubit() : super(AuthInitial());
@@ -25,7 +25,7 @@ class AuthCubit extends Cubit<AuthState> {
   //     await _auth.currentUser!.linkWithCredential(credential);
   //     await _auth.currentUser!.updateDisplayName(googleUser.displayName);
   //     await _auth.currentUser!.updatePhotoURL(googleUser.photoUrl);
-  //     emit(UserSingupAndLinkedWithGoogle());
+  //     emit(UserSingUpAndLinkedWithGoogle());
   //   } catch (e) {
   //     emit(AuthError(e.toString()));
   //   }
@@ -106,7 +106,7 @@ class AuthCubit extends Cubit<AuthState> {
   //     await _auth.currentUser!.updateDisplayName(name);
   //     await _auth.currentUser!.sendEmailVerification();
   //     await _auth.signOut();
-  //     emit(UserSingupButNotVerified());
+  //     emit(UserSingUpButNotVerified());
   //   } catch (e) {
   //     emit(AuthError(e.toString()));
   //   }

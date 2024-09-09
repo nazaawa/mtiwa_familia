@@ -24,6 +24,6 @@ class UserSignedOut extends AuthState {}
 
 class UserSignIn extends AuthState {}
 
-class UserSingupAndLinkedWithGoogle extends AuthState {}
+class UserSingUpAndLinkedWithGoogle extends AuthState {}
 
-class UserSingupButNotVerified extends AuthState {}
+class UserSingUpButNotVerified extends AuthState {}

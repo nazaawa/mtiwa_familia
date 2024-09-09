@@ -4,8 +4,8 @@ import 'package:gap/gap.dart';
 import 'package:mtiwa_familia/core/helpers/build_divider.dart';
 import 'package:mtiwa_familia/core/theming/styles.dart';
 
-class SigninWithGoogleText extends StatelessWidget {
-  const SigninWithGoogleText({
+class SignInWithGoogleText extends StatelessWidget {
+  const SignInWithGoogleText({
     super.key,
   });
 
